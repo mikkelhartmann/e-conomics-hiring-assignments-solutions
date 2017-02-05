@@ -10,8 +10,8 @@ def baselineClassifier(company_df):
     trainSize = int(round(percentTrainSize*company_df.shape[0]))
     testSize = int(company_df.shape[0]-trainSize) 
 
-    train_df = company_df.head(trainSize)
-    test_df = company_df.tail(testSize)
+    train_df = company_df.tail(trainSize)
+    test_df = company_df.head(testSize)
 
     # Build the matrice on the train set
     trainMatrix = np.zeros((numUniqueBankEntries,numUniqueAccounts))

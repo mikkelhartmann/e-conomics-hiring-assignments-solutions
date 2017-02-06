@@ -1,3 +1,4 @@
+import numpy as np
 def find_unique_bank_entries_and_accounts(company_df):
     """Finding unique bank entries and unique accounts in the company database"""
     unique_bank_entry_text = company_df['BankEntryText'].unique()
@@ -29,7 +30,6 @@ def build_train_matrix(
         train_df
     ):
     """Building the matrix from the train data. This will be used to build the classifier."""
-    import numpy as np
     train_matrix = np.zeros((num_unique_bank_entries, num_unique_accounts))
     unique_bank_entry_counter = 0
     for bank_entry in unique_bank_entry_text:
@@ -43,7 +43,6 @@ def build_train_matrix(
 
 def calculate_accuracy(test_df, test_size, classifier):
     """Calculating the accuracy of the classifier."""
-    import numpy as np
     account_test = np.zeros((test_size, 1))
     counter = 0
     for account_number in test_df['AccountNumber']:
@@ -65,7 +64,6 @@ def calculate_accuracy(test_df, test_size, classifier):
 
 def max_elements_in_train_matrix(train_matrix):
     """Finding the maximal element in each row of the training matrix."""
-    import numpy as np
     max_element_idx = np.zeros(len(train_matrix))
     for row in range(0, len(train_matrix)):
         index = np.where(train_matrix[row, :] == max(train_matrix[row, :]))

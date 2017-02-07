@@ -75,7 +75,8 @@ def build_classifier(
         unique_account_numbers,
         max_element_idx
     ):
-    """Builds the classifier"""
+    """Build and return a dictionary with bank entry text as key and most
+    frequently account number as value."""
     counter = 0
     classifier = {}
     for bank_entry in unique_bank_entry_text:

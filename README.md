@@ -1,7 +1,7 @@
 # e-conomics-hiring-assignments-solutions
 My solution to the hiring assignment presented in: https://github.com/e-conomic/hiring-assigments/tree/master/autosuggest/bankrec-assignment
 
-My solution is presented in the solution.ipynb.
+My solution is presented in solution.ipynb.
 
 ## Requirement
 The jupyter notebook is written for python 2.  
